@@ -1,0 +1,118 @@
+body {
+	font-family: Helvetica, sans-serif;
+	margin: 0;
+	background: #F3F3F3;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+
+	.form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		input {
+			background-color: #171717;
+			color: #F3F3F3;
+			flex: 1;
+			font-size: 18px;
+			height: 40px;
+			text-indent: 10px;
+			border: none;
+			outline: none;
+			padding: 0;
+			margin: 0;
+
+			&::placeholder {
+				color: #AAA;
+			}
+		}
+
+		button {
+			width: 50px;
+			height: 40px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			background-color: #24A484;
+			color: #F3F3F3;
+			font-size: 24px;
+			line-height: 40px;
+			padding: 0;
+			
+			&:hover {
+				background-color: darken($color: #24A484, $amount: 5);
+			}
+
+			&:active {
+				background-color: lighten($color: #24A484, $amount: 5);
+			}
+		}
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0px;
+		.list-item {
+			display: flex;
+			margin: 10px;
+			padding: 15px 15px;
+			background-color: #FFFFFF;
+
+			.item-name {
+				flex: 1;
+				color: #24A484;
+				font-size: 18px;
+
+				border: none;
+				outline: none;
+				background: none;
+
+				&:disabled {
+					color: #171717;
+				}
+			}
+
+			.item-actions {
+				button {
+					width: 75px;
+					height: 25px;
+					border: none;
+					outline: none;
+
+					color: #F3F3F3;
+					cursor: pointer;
+
+					&.update {
+						background-color: #24A484;
+
+						&:hover {
+							background-color: lighten($color: #24A484, $amount: 5);
+						}
+
+						&:active {
+							background-color: darken($color: #24A484, $amount: 5);
+						}
+					}
+					
+					&.remove {
+						background-color: #AF1E2D;
+						&:hover {
+							background-color: lighten($color: #AF1E2D, $amount: 5);
+						}
+
+						&:active {
+							background-color: darken($color: #AF1E2D, $amount: 5);
+						}
+					}
+				}
+			}
+		}
+	}
+}
